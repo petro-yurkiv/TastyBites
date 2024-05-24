@@ -5,4 +5,8 @@
 //  Created by Petro Yurkiv on 24.05.2024.
 //
 
-import Foundation
+import UIKit
+
+protocol Composer {
+    func build(coordinator: Coordinator) -> UIViewController
+}
