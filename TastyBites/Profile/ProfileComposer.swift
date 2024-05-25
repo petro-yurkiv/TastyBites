@@ -8,8 +8,9 @@
 import SwiftUI
 
 class ProfileComposer: Composer {
-    func build(coordinator: any Coordinator) -> UIViewController {
+    func build(coordinator: any ChildCoordinator) -> UIViewController {
         let viewModel = ProfileViewModel()
+        viewModel.coordinator = coordinator as? ProfileCoordinator
         let view = ProfileView(viewModel: viewModel)
         let vc = UIHostingController(rootView: view)
         return vc

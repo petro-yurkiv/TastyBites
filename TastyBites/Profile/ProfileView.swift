@@ -21,6 +21,9 @@ struct ProfileView: View {
                 viewModel.onTap()
             }
         }
+        .onAppear {
+            print(viewModel.coordinator?.parentCoordinator.childCoordinators)
+        }
     }
 }
 

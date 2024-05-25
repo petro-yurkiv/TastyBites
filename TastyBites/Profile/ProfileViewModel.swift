@@ -13,5 +13,6 @@ class ProfileViewModel: ObservableObject {
     
     func onTap() {
         text = "Profile"
+        AppModel.token = ""
     }
 }

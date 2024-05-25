@@ -7,16 +7,27 @@
 
 import UIKit
 
-class SignUpCoordinator: Coordinator {
+class SignUpCoordinator: ChildCoordinator {
+    var parentCoordinator: Coordinator
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
-    init(navigationController: UINavigationController) {
+    required init(parentCoordinator: any Coordinator, navigationController: UINavigationController) {
+        self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
     }
     
     func start() {
         let vc = SignUpComposer().build(coordinator: self)
-        navigationController.setViewControllers([vc], animated: true)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func navigateToSignIn() {
+        navigationController.popViewController(animated: true)
+    }
+    
+    func navigateToHome() {
+        let parentCoordinator = parentCoordinator as? SignInCoordinator
+        parentCoordinator?.navigateToHome()
     }
 }

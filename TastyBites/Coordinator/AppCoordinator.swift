@@ -7,8 +7,9 @@
 
 import UIKit
 
-class AppCoordinator: MainCoordinator {
+class AppCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
+    var tabBarChildCoordinators: [ChildCoordinator] = []
     private var window: UIWindow
     private var tabBarController = UITabBarController()
     
@@ -19,19 +20,20 @@ class AppCoordinator: MainCoordinator {
     }
     
     func initializeChildCoordinators() {
-        let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
-        let addRecipeCoordinator = AddRecipeCoordinator(navigationController: UINavigationController())
-        let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+        let homeCoordinator = HomeCoordinator(parentCoordinator: self, navigationController: UINavigationController())
+        let addRecipeCoordinator = AddRecipeCoordinator(parentCoordinator: self, navigationController: UINavigationController())
+        let profileCoordinator = ProfileCoordinator(parentCoordinator: self, navigationController: UINavigationController())
         
-        childCoordinators = [homeCoordinator, addRecipeCoordinator, profileCoordinator]
+        tabBarChildCoordinators = [homeCoordinator, addRecipeCoordinator, profileCoordinator]
 
-        childCoordinators.forEach { coordinator in
+        tabBarChildCoordinators.forEach { coordinator in
             coordinator.start()
+            childCoordinators.append(coordinator)
         }
     }
     
     func setViewsToTabBarController() {
-        tabBarController.viewControllers = childCoordinators.map { $0.navigationController }
+        tabBarController.viewControllers = tabBarChildCoordinators.map { $0.navigationController }
         
         tabBarController.tabBar.items?.enumerated().forEach { index, item in
             let tabBarItem = TabBarItem.allCases[index]
@@ -46,8 +48,9 @@ class AppCoordinator: MainCoordinator {
     }
     
     func notAuthStart() {
+        print("token: \(AppModel.token)")
         if AppModel.token == "" {
-            let initialCoordinator = SignInCoordinator(navigationController: UINavigationController())
+            let initialCoordinator = SignInCoordinator(parentCoordinator: self, navigationController: UINavigationController())
             childCoordinators.append(initialCoordinator)
             initialCoordinator.start()
             

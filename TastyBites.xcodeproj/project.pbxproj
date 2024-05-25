@@ -12,8 +12,8 @@
 		520AB6A72C00CA8E00B3AC66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520AB6A62C00CA8E00B3AC66 /* Assets.xcassets */; };
 		520AB6AA2C00CA8E00B3AC66 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 520AB6A92C00CA8E00B3AC66 /* Base */; };
 		520AB6B32C00CB7300B3AC66 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6B22C00CB7300B3AC66 /* AppCoordinator.swift */; };
-		520AB6B52C00CB8000B3AC66 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6B42C00CB8000B3AC66 /* MainCoordinator.swift */; };
-		520AB6B72C00CB8800B3AC66 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6B62C00CB8800B3AC66 /* Coordinator.swift */; };
+		520AB6B52C00CB8000B3AC66 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6B42C00CB8000B3AC66 /* Coordinator.swift */; };
+		520AB6B72C00CB8800B3AC66 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6B62C00CB8800B3AC66 /* ChildCoordinator.swift */; };
 		520AB6BA2C00CCBC00B3AC66 /* Composer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6B92C00CCBC00B3AC66 /* Composer.swift */; };
 		520AB6BD2C00CE8400B3AC66 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6BC2C00CE8400B3AC66 /* HomeCoordinator.swift */; };
 		520AB6BF2C00CEC800B3AC66 /* HomeComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6BE2C00CEC800B3AC66 /* HomeComposer.swift */; };
@@ -47,8 +47,8 @@
 		520AB6A92C00CA8E00B3AC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		520AB6AB2C00CA8E00B3AC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520AB6B22C00CB7300B3AC66 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		520AB6B42C00CB8000B3AC66 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		520AB6B62C00CB8800B3AC66 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		520AB6B42C00CB8000B3AC66 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		520AB6B62C00CB8800B3AC66 /* ChildCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
 		520AB6B92C00CCBC00B3AC66 /* Composer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composer.swift; sourceTree = "<group>"; };
 		520AB6BC2C00CE8400B3AC66 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		520AB6BE2C00CEC800B3AC66 /* HomeComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComposer.swift; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				520AB6B22C00CB7300B3AC66 /* AppCoordinator.swift */,
-				520AB6B42C00CB8000B3AC66 /* MainCoordinator.swift */,
-				520AB6B62C00CB8800B3AC66 /* Coordinator.swift */,
+				520AB6B42C00CB8000B3AC66 /* Coordinator.swift */,
+				520AB6B62C00CB8800B3AC66 /* ChildCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -196,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				520AB6EB2C01F64000B3AC66 /* SignUpCoordinator.swift */,
-				520AB6E12C01F54700B3AC66 /* SignUpView.swift */,
 				520AB6ED2C01F66200B3AC66 /* SignUpComposer.swift */,
+				520AB6E12C01F54700B3AC66 /* SignUpView.swift */,
 				520AB6E52C01F57400B3AC66 /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
@@ -280,8 +280,8 @@
 				520AB6E82C01F59B00B3AC66 /* SignInCoordinator.swift in Sources */,
 				520AB6EE2C01F66200B3AC66 /* SignUpComposer.swift in Sources */,
 				520AB6E42C01F56500B3AC66 /* SignInViewModel.swift in Sources */,
-				520AB6B52C00CB8000B3AC66 /* MainCoordinator.swift in Sources */,
-				520AB6B72C00CB8800B3AC66 /* Coordinator.swift in Sources */,
+				520AB6B52C00CB8000B3AC66 /* Coordinator.swift in Sources */,
+				520AB6B72C00CB8800B3AC66 /* ChildCoordinator.swift in Sources */,
 				520AB6C52C00D17C00B3AC66 /* HomeViewModel.swift in Sources */,
 				520AB6EA2C01F5E900B3AC66 /* SignInComposer.swift in Sources */,
 				520AB6CA2C01F06800B3AC66 /* AddRecipeCoordinator.swift in Sources */,

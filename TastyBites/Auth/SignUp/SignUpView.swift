@@ -18,7 +18,11 @@ struct SignUpView: View {
                 .foregroundColor(.red)
             
             Button("Tap") {
-                viewModel.onTap()
+                viewModel.signUp()
+            }
+            
+            Button("Sign In") {
+                viewModel.goToSignIn()
             }
         }
     }

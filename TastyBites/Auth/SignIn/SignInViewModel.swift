@@ -11,7 +11,12 @@ class SignInViewModel: ObservableObject {
     weak var coordinator: SignInCoordinator?
     @Published var text: String?
     
-    func onTap() {
-        text = "SignIn"
+    func signIn() {
+        AppModel.token = "test"
+        coordinator?.navigateToHome()
+    }
+    
+    func goToSignUp() {
+        coordinator?.navigateToSignUp()
     }
 }

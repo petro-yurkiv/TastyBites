@@ -7,11 +7,13 @@
 
 import UIKit
 
-class AddRecipeCoordinator: Coordinator {
+class AddRecipeCoordinator: ChildCoordinator {
+    var parentCoordinator: Coordinator
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
-    init(navigationController: UINavigationController) {
+    required init(parentCoordinator: any Coordinator, navigationController: UINavigationController) {
+        self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
     }
     

@@ -8,5 +8,5 @@
 import UIKit
 
 protocol Composer {
-    func build(coordinator: Coordinator) -> UIViewController
+    func build(coordinator: ChildCoordinator) -> UIViewController
 }
