@@ -18,7 +18,29 @@ class AppCoordinator: MainCoordinator {
         window.makeKeyAndVisible()
     }
     
+    func initializeChildCoordinators() {
+        let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+        let addRecipeCoordinator = AddRecipeCoordinator(navigationController: UINavigationController())
+        let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
+        
+        childCoordinators = [homeCoordinator, addRecipeCoordinator, profileCoordinator]
+
+        childCoordinators.forEach { coordinator in
+            coordinator.start()
+        }
+    }
+    
+    func setViewsToTabBarController() {
+        tabBarController.viewControllers = childCoordinators.map { $0.navigationController }
+        
+        tabBarController.tabBar.items?.enumerated().forEach { index, item in
+            let tabBarItem = TabBarItem.allCases[index]
+            item.image = UIImage(systemName: tabBarItem.icon)
+        }
+    }
+    
     func start() {
-        print("start")
+        initializeChildCoordinators()
+        setViewsToTabBarController()
     }
 }
