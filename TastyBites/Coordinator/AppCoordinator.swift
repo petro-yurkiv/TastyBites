@@ -42,5 +42,23 @@ class AppCoordinator: MainCoordinator {
     func start() {
         initializeChildCoordinators()
         setViewsToTabBarController()
+        notAuthStart()
+    }
+    
+    func notAuthStart() {
+        if AppModel.token == "" {
+            let initialCoordinator = SignInCoordinator(navigationController: UINavigationController())
+            childCoordinators.append(initialCoordinator)
+            initialCoordinator.start()
+            
+            initialCoordinator.navigationController.modalPresentationStyle = .overFullScreen
+            DispatchQueue.main.async {
+                if let selectedViewController = self.tabBarController.selectedViewController {
+                    selectedViewController.present(initialCoordinator.navigationController, animated: false) {
+                        self.tabBarController.selectedIndex = 0
+                    }
+                }
+            }
+        }
     }
 }
