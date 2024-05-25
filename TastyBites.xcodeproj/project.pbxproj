@@ -37,6 +37,8 @@
 		520AB6EA2C01F5E900B3AC66 /* SignInComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6E92C01F5E900B3AC66 /* SignInComposer.swift */; };
 		520AB6EC2C01F64000B3AC66 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6EB2C01F64000B3AC66 /* SignUpCoordinator.swift */; };
 		520AB6EE2C01F66200B3AC66 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6ED2C01F66200B3AC66 /* SignUpComposer.swift */; };
+		520AB6F12C022AA900B3AC66 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6F02C022AA900B3AC66 /* AppColor.swift */; };
+		520AB6F52C022DCD00B3AC66 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6F42C022DCD00B3AC66 /* SearchField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		520AB6E92C01F5E900B3AC66 /* SignInComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInComposer.swift; sourceTree = "<group>"; };
 		520AB6EB2C01F64000B3AC66 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		520AB6ED2C01F66200B3AC66 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		520AB6F02C022AA900B3AC66 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		520AB6F42C022DCD00B3AC66 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		520AB69C2C00CA8B00B3AC66 /* TastyBites */ = {
 			isa = PBXGroup;
 			children = (
+				520AB6EF2C02293C00B3AC66 /* Views */,
 				520AB6DC2C01F51300B3AC66 /* Auth */,
 				520AB6BB2C00CE7400B3AC66 /* Home */,
 				520AB6C62C01F03600B3AC66 /* AddRecipe */,
@@ -116,6 +121,7 @@
 				520AB6B92C00CCBC00B3AC66 /* Composer.swift */,
 				520AB6D82C01F2EB00B3AC66 /* TabBarItem.swift */,
 				520AB6DA2C01F50F00B3AC66 /* AppModel.swift */,
+				520AB6F02C022AA900B3AC66 /* AppColor.swift */,
 			);
 			path = TastyBites;
 			sourceTree = "<group>";
@@ -203,6 +209,14 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		520AB6EF2C02293C00B3AC66 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				520AB6F42C022DCD00B3AC66 /* SearchField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,6 +293,7 @@
 				520AB6DB2C01F50F00B3AC66 /* AppModel.swift in Sources */,
 				520AB6E82C01F59B00B3AC66 /* SignInCoordinator.swift in Sources */,
 				520AB6EE2C01F66200B3AC66 /* SignUpComposer.swift in Sources */,
+				520AB6F52C022DCD00B3AC66 /* SearchField.swift in Sources */,
 				520AB6E42C01F56500B3AC66 /* SignInViewModel.swift in Sources */,
 				520AB6B52C00CB8000B3AC66 /* Coordinator.swift in Sources */,
 				520AB6B72C00CB8800B3AC66 /* ChildCoordinator.swift in Sources */,
@@ -293,6 +308,7 @@
 				520AB6D32C01F1DD00B3AC66 /* ProfileComposer.swift in Sources */,
 				520AB6A02C00CA8B00B3AC66 /* SceneDelegate.swift in Sources */,
 				520AB6D72C01F24200B3AC66 /* ProfileViewModel.swift in Sources */,
+				520AB6F12C022AA900B3AC66 /* AppColor.swift in Sources */,
 				520AB6D92C01F2EB00B3AC66 /* TabBarItem.swift in Sources */,
 				520AB6E02C01F53C00B3AC66 /* SignInView.swift in Sources */,
 				520AB6E22C01F54700B3AC66 /* SignUpView.swift in Sources */,
