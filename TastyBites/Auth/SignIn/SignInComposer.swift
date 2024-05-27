@@ -8,7 +8,7 @@
 import SwiftUI
 
 class SignInComposer: Composer {
-    func build(coordinator: any ChildCoordinator) -> UIViewController {
+    func build(coordinator: ChildCoordinator) -> UIViewController {
         let viewModel = SignInViewModel()
         viewModel.coordinator = coordinator as? SignInCoordinator
         let view = SignInView(viewModel: viewModel)

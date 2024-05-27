@@ -1,13 +1,13 @@
 //
-//  AddRecipeCoordinator.swift
+//  RecipeCoordinator.swift
 //  TastyBites
 //
-//  Created by Petro Yurkiv on 25.05.2024.
+//  Created by Petro Yurkiv on 27.05.2024.
 //
 
 import UIKit
 
-class AddRecipeCoordinator: ChildCoordinator {
+class RecipeCoordinator: ChildCoordinator {
     var parentCoordinator: Coordinator
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
@@ -17,8 +17,12 @@ class AddRecipeCoordinator: ChildCoordinator {
         self.navigationController = navigationController
     }
     
+    deinit {
+        print("coordinator deinited")
+    }
+    
     func start() {
-        let vc = AddRecipeComposer().build(coordinator: self)
-        navigationController.setViewControllers([vc], animated: true)
+        let vc = RecipeComposer().build(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

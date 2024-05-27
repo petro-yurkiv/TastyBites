@@ -12,7 +12,7 @@ class HomeCoordinator: ChildCoordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
-    required init(parentCoordinator: any Coordinator, navigationController: UINavigationController) {
+    required init(parentCoordinator: Coordinator, navigationController: UINavigationController) {
         self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
     }
@@ -20,5 +20,11 @@ class HomeCoordinator: ChildCoordinator {
     func start() {
         let vc = HomeComposer().build(coordinator: self)
         navigationController.setViewControllers([vc], animated: true)
+    }
+    
+    func navigateToRecipe() {
+        let coordinator = RecipeCoordinator(parentCoordinator: self, navigationController: navigationController)
+        coordinator.start()
+//        childCoordinators.append(coordinator)
     }
 }

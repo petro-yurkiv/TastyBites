@@ -12,7 +12,7 @@ class ProfileCoordinator: ChildCoordinator {
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
     
-    required init(parentCoordinator: any Coordinator, navigationController: UINavigationController) {
+    required init(parentCoordinator: Coordinator, navigationController: UINavigationController) {
         self.parentCoordinator = parentCoordinator
         self.navigationController = navigationController
     }

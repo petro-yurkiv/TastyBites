@@ -16,4 +16,8 @@ class HomeViewModel: ObservableObject {
     func onTap() {
         text = "Home"
     }
+    
+    func goToRecipe() {
+        coordinator?.navigateToRecipe()
+    }
 }

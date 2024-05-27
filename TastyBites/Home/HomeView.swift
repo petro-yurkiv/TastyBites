@@ -24,6 +24,9 @@ struct HomeView: View {
                 recipes(geometry)
             }
             .padding(.horizontal, 16.0)
+            .onAppear(perform: {
+                print(viewModel.coordinator?.childCoordinators)
+            })
         }
     }
     
@@ -74,7 +77,9 @@ struct HomeView: View {
                 LazyVGrid(columns: columns, content: {
                     ForEach(Array(viewModel.recipes.enumerated()), id: \.element) { element, index in
                         RecipeCell {
-                            print("Tap")
+                            print("like")
+                        } onTap: {
+                            viewModel.goToRecipe()
                         }
                         .frame(height: geometry.size.height / 3)
                     }

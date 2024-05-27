@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeCell: View {
     var likeAction: () -> Void
+    var onTap: () -> Void
     
     var body: some View {
         GeometryReader(content: { geometry in
@@ -25,6 +26,9 @@ struct RecipeCell: View {
                     .foregroundStyle(.white)
             }
             .cornerRadius(8.0)
+            .onTapGesture {
+                onTap()
+            }
         })
     }
     
@@ -70,6 +74,8 @@ struct RecipeCell: View {
 
 #Preview {
     RecipeCell {
+        
+    } onTap: {
         
     }
 }

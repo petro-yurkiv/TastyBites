@@ -8,7 +8,7 @@
 import SwiftUI
 
 class HomeComposer: Composer {
-    func build(coordinator: any ChildCoordinator) -> UIViewController {
+    func build(coordinator: ChildCoordinator) -> UIViewController {
         let viewModel = HomeViewModel()
         viewModel.coordinator = coordinator as? HomeCoordinator
         let view = HomeView(viewModel: viewModel)

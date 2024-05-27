@@ -8,7 +8,7 @@
 import SwiftUI
 
 class AddRecipeComposer: Composer {
-    func build(coordinator: any ChildCoordinator) -> UIViewController {
+    func build(coordinator: ChildCoordinator) -> UIViewController {
         let viewModel = AddRecipeViewModel()
         viewModel.coordinator = coordinator as? AddRecipeCoordinator
         let view = AddRecipeView(viewModel: viewModel)
