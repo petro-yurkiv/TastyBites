@@ -12,4 +12,5 @@ enum AppColor: String {
     case object = "object"
     case secondary = "secondary"
     case light = "light"
+    case text = "text"
 }

@@ -44,6 +44,7 @@
 		520AB6FE2C049C6700B3AC66 /* RecipeComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6FD2C049C6700B3AC66 /* RecipeComposer.swift */; };
 		520AB7002C049C7400B3AC66 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6FF2C049C7400B3AC66 /* RecipeView.swift */; };
 		520AB7022C049C8200B3AC66 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7012C049C8200B3AC66 /* RecipeViewModel.swift */; };
+		520AB7042C04B98600B3AC66 /* SpecialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7032C04B98600B3AC66 /* SpecialButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		520AB6FD2C049C6700B3AC66 /* RecipeComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeComposer.swift; sourceTree = "<group>"; };
 		520AB6FF2C049C7400B3AC66 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		520AB7012C049C8200B3AC66 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		520AB7032C04B98600B3AC66 /* SpecialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			children = (
 				520AB6F82C023E7E00B3AC66 /* RecipeCell.swift */,
 				520AB6F42C022DCD00B3AC66 /* SearchField.swift */,
+				520AB7032C04B98600B3AC66 /* SpecialButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				520AB6EA2C01F5E900B3AC66 /* SignInComposer.swift in Sources */,
 				520AB7002C049C7400B3AC66 /* RecipeView.swift in Sources */,
 				520AB6CA2C01F06800B3AC66 /* AddRecipeCoordinator.swift in Sources */,
+				520AB7042C04B98600B3AC66 /* SpecialButton.swift in Sources */,
 				520AB69E2C00CA8B00B3AC66 /* AppDelegate.swift in Sources */,
 				520AB6FB2C049C5500B3AC66 /* RecipeCoordinator.swift in Sources */,
 				520AB6E62C01F57400B3AC66 /* SignUpViewModel.swift in Sources */,
