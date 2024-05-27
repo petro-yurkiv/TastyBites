@@ -39,6 +39,7 @@
 		520AB6EE2C01F66200B3AC66 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6ED2C01F66200B3AC66 /* SignUpComposer.swift */; };
 		520AB6F12C022AA900B3AC66 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6F02C022AA900B3AC66 /* AppColor.swift */; };
 		520AB6F52C022DCD00B3AC66 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6F42C022DCD00B3AC66 /* SearchField.swift */; };
+		520AB6F92C023E7E00B3AC66 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6F82C023E7E00B3AC66 /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		520AB6ED2C01F66200B3AC66 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		520AB6F02C022AA900B3AC66 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		520AB6F42C022DCD00B3AC66 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		520AB6F82C023E7E00B3AC66 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		520AB6EF2C02293C00B3AC66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				520AB6F82C023E7E00B3AC66 /* RecipeCell.swift */,
 				520AB6F42C022DCD00B3AC66 /* SearchField.swift */,
 			);
 			path = Views;
@@ -313,6 +316,7 @@
 				520AB6E02C01F53C00B3AC66 /* SignInView.swift in Sources */,
 				520AB6E22C01F54700B3AC66 /* SignUpView.swift in Sources */,
 				520AB6BD2C00CE8400B3AC66 /* HomeCoordinator.swift in Sources */,
+				520AB6F92C023E7E00B3AC66 /* RecipeCell.swift in Sources */,
 				520AB6BF2C00CEC800B3AC66 /* HomeComposer.swift in Sources */,
 				520AB6CC2C01F08600B3AC66 /* AddRecipeComposer.swift in Sources */,
 				520AB6D12C01F1B700B3AC66 /* ProfileCoordinator.swift in Sources */,

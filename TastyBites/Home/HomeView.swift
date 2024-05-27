@@ -10,15 +10,21 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     @State private var selectedIndex: Int = 0
+    private let columns: [GridItem] = [
+        GridItem(.flexible(minimum: 100.0, maximum: 200.0)),
+        GridItem(.flexible(minimum: 100.0, maximum: 200.0))
+    ]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            title
-            SearchField()
-            category
-            recipes()
+        GeometryReader { geometry in
+            VStack(alignment: .leading) {
+                title
+                SearchField()
+                category
+                recipes(geometry)
+            }
+            .padding(.horizontal, 16.0)
         }
-        .padding(.horizontal, 16.0)
     }
     
     var title: some View {
@@ -59,14 +65,23 @@ struct HomeView: View {
         .cornerRadius(8.0)
     }
     
-    func recipes() -> some View {
+    func recipes(_ geometry: GeometryProxy) -> some View {
         VStack(alignment: .leading) {
             Text("Recipes")
                 .foregroundStyle(Color(AppColor.secondary.rawValue))
                 .font(.system(size: 24.0, weight: .medium))
             ScrollView(.vertical) {
-                
+                LazyVGrid(columns: columns, content: {
+                    ForEach(Array(viewModel.recipes.enumerated()), id: \.element) { element, index in
+                        RecipeCell {
+                            print("Tap")
+                        }
+                        .frame(height: geometry.size.height / 3)
+                    }
+                })
+                .padding(.bottom, 16.0)
             }
+            .scrollIndicators(.hidden)
         }
     }
 }
