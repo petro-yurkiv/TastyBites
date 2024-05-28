@@ -27,4 +27,16 @@ class ProfileCoordinator: ChildCoordinator {
         coordinator.start()
         childCoordinators.append(coordinator)
     }
+    
+    func navigateToMyRecipes() {
+        let coordinator = RecipesCoordinator(parentCoordinator: self, navigationController: navigationController)
+        coordinator.startWithType(screenType: .myRecipes)
+        childCoordinators.append(coordinator)
+    }
+    
+    func navigateToLiked() {
+        let coordinator = RecipesCoordinator(parentCoordinator: self, navigationController: navigationController)
+        coordinator.startWithType(screenType: .liked)
+        childCoordinators.append(coordinator)
+    }
 }

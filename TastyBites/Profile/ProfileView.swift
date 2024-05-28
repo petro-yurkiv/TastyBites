@@ -23,15 +23,15 @@ struct ProfileView: View {
                 
                 VStack(spacing: 16.0) {
                     SpecialButton(title: "My recipes", isAccent: true) {
-                        
+                        viewModel.goToMyRecipes()
                     }
                     
                     SpecialButton(title: "Liked", isAccent: true) {
-                        
+                        viewModel.goToLiked()
                     }
                     
                     SpecialButton(title: "Sign out", isAccent: false) {
-                        
+                        viewModel.signOut()
                     }
                 }
                 

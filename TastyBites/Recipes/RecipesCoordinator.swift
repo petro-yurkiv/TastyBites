@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCoordinator: ChildCoordinator {
+class RecipesCoordinator: ChildCoordinator {
     var parentCoordinator: Coordinator
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
@@ -18,8 +18,13 @@ class HomeCoordinator: ChildCoordinator {
     }
     
     func start() {
-        let vc = HomeComposer().build(coordinator: self)
+        let vc = RecipesComposer(screenType: .home).build(coordinator: self)
         navigationController.setViewControllers([vc], animated: true)
+    }
+    
+    func startWithType(screenType: RecipesScreenType) {
+        let vc = RecipesComposer(screenType: screenType).build(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func navigateToRecipe() {

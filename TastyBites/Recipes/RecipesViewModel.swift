@@ -7,14 +7,18 @@
 
 import Foundation
 
-class HomeViewModel: ObservableObject {
-    weak var coordinator: HomeCoordinator?
-    @Published var text: String?
+class RecipesViewModel: ObservableObject {
+    weak var coordinator: RecipesCoordinator?
+    var screenType: RecipesScreenType
     var categories: [String] = ["All", "Breakfast", "Lunch", "Al", "Breakfas", "Lunc"]
     var recipes: [String] = ["Test1", "Test2", "Test3", "Test4", "Test5"]
     
-    func onTap() {
-        text = "Home"
+    init(screenType: RecipesScreenType) {
+        self.screenType = screenType
+    }
+    
+    deinit {
+        coordinator?.didFinish()
     }
     
     func goToRecipe() {

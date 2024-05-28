@@ -8,5 +8,9 @@
 import Foundation
 
 class SettingsViewModel: ObservableObject {
+    deinit {
+        coordinator?.didFinish()
+    }
+    
     weak var coordinator: SettingsCoordinator?
 }

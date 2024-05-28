@@ -20,7 +20,7 @@ class AppCoordinator: Coordinator {
     }
     
     func initializeChildCoordinators() {
-        let homeCoordinator = HomeCoordinator(parentCoordinator: self, navigationController: UINavigationController())
+        let homeCoordinator = RecipesCoordinator(parentCoordinator: self, navigationController: UINavigationController())
         let addRecipeCoordinator = AddRecipeCoordinator(parentCoordinator: self, navigationController: UINavigationController())
         let profileCoordinator = ProfileCoordinator(parentCoordinator: self, navigationController: UINavigationController())
         

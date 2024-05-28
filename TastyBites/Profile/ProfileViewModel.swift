@@ -14,6 +14,14 @@ class ProfileViewModel: ObservableObject {
         coordinator?.navigateToSettings()
     }
     
+    func goToMyRecipes() {
+        coordinator?.navigateToMyRecipes()
+    }
+    
+    func goToLiked() {
+        coordinator?.navigateToLiked()
+    }
+    
     func signOut() {
         AppModel.token = ""
     }

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct HomeView: View {
-    @ObservedObject var viewModel: HomeViewModel
+struct RecipesView: View {
+    @ObservedObject var viewModel: RecipesViewModel
     @State private var selectedIndex: Int = 0
     private let columns: [GridItem] = [
         GridItem(.flexible(minimum: 100.0, maximum: 200.0)),
@@ -17,13 +17,31 @@ struct HomeView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .leading) {
-                title
-                SearchField()
-                category
-                recipes(geometry)
+            VStack(alignment: .leading, spacing: 0.0) {
+                if viewModel.screenType == .home {
+                    title
+                }
+                
+                VStack(spacing: 16.0) {
+                    SearchField()
+                    category
+                    recipes(geometry)
+                }
+                .padding(.top, 16.0)
             }
             .padding(.horizontal, 16.0)
+        }
+        .navigationTitle(setTitle())
+    }
+    
+    func setTitle() -> String {
+        switch viewModel.screenType {
+        case .home:
+            return ""
+        case .myRecipes:
+            return "My recipes"
+        case .liked:
+            return "Liked"
         }
     }
     
@@ -93,5 +111,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(viewModel: HomeViewModel())
+    RecipesView(viewModel: RecipesViewModel(screenType: .home))
 }
