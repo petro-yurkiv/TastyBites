@@ -43,7 +43,7 @@ struct ProfileView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    print("Custom button tapped")
+                    viewModel.goToSettings()
                 }) {
                     Image(systemName: "gearshape")
                         .foregroundStyle(.black)

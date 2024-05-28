@@ -21,4 +21,10 @@ class ProfileCoordinator: ChildCoordinator {
         let vc = ProfileComposer().build(coordinator: self)
         navigationController.setViewControllers([vc], animated: true)
     }
+    
+    func navigateToSettings() {
+        let coordinator = SettingsCoordinator(parentCoordinator: self, navigationController: navigationController)
+        coordinator.start()
+        childCoordinators.append(coordinator)
+    }
 }

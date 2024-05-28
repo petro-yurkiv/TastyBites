@@ -51,6 +51,10 @@
 		520AB70D2C06152F00B3AC66 /* CookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB70C2C06152F00B3AC66 /* CookingViewModel.swift */; };
 		520AB70F2C06324B00B3AC66 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB70E2C06324B00B3AC66 /* SuccessView.swift */; };
 		520AB7112C06325700B3AC66 /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7102C06325700B3AC66 /* FailureView.swift */; };
+		520AB7142C06419600B3AC66 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7132C06419600B3AC66 /* SettingsCoordinator.swift */; };
+		520AB7162C0641A200B3AC66 /* SettingsComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7152C0641A200B3AC66 /* SettingsComposer.swift */; };
+		520AB7182C0641AF00B3AC66 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7172C0641AF00B3AC66 /* SettingsView.swift */; };
+		520AB71A2C0641BB00B3AC66 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,10 @@
 		520AB70C2C06152F00B3AC66 /* CookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingViewModel.swift; sourceTree = "<group>"; };
 		520AB70E2C06324B00B3AC66 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		520AB7102C06325700B3AC66 /* FailureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
+		520AB7132C06419600B3AC66 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		520AB7152C0641A200B3AC66 /* SettingsComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsComposer.swift; sourceTree = "<group>"; };
+		520AB7172C0641AF00B3AC66 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,7 @@
 				520AB6D22C01F1DD00B3AC66 /* ProfileComposer.swift */,
 				520AB6D42C01F20D00B3AC66 /* ProfileView.swift */,
 				520AB6D62C01F24200B3AC66 /* ProfileViewModel.swift */,
+				520AB7122C06417500B3AC66 /* Settings */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -267,6 +276,17 @@
 				520AB70C2C06152F00B3AC66 /* CookingViewModel.swift */,
 			);
 			path = Cooking;
+			sourceTree = "<group>";
+		};
+		520AB7122C06417500B3AC66 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				520AB7132C06419600B3AC66 /* SettingsCoordinator.swift */,
+				520AB7152C0641A200B3AC66 /* SettingsComposer.swift */,
+				520AB7172C0641AF00B3AC66 /* SettingsView.swift */,
+				520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,16 +360,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				520AB6C32C00CF1500B3AC66 /* HomeView.swift in Sources */,
+				520AB71A2C0641BB00B3AC66 /* SettingsViewModel.swift in Sources */,
 				520AB6B32C00CB7300B3AC66 /* AppCoordinator.swift in Sources */,
 				520AB6C82C01F05100B3AC66 /* AddRecipeView.swift in Sources */,
 				520AB7022C049C8200B3AC66 /* RecipeViewModel.swift in Sources */,
 				520AB7092C06151700B3AC66 /* CookingComposer.swift in Sources */,
 				520AB6DB2C01F50F00B3AC66 /* AppModel.swift in Sources */,
+				520AB7162C0641A200B3AC66 /* SettingsComposer.swift in Sources */,
 				520AB6E82C01F59B00B3AC66 /* SignInCoordinator.swift in Sources */,
 				520AB6EE2C01F66200B3AC66 /* SignUpComposer.swift in Sources */,
 				520AB6F52C022DCD00B3AC66 /* SearchField.swift in Sources */,
 				520AB6E42C01F56500B3AC66 /* SignInViewModel.swift in Sources */,
 				520AB6B52C00CB8000B3AC66 /* Coordinator.swift in Sources */,
+				520AB7142C06419600B3AC66 /* SettingsCoordinator.swift in Sources */,
 				520AB6B72C00CB8800B3AC66 /* ChildCoordinator.swift in Sources */,
 				520AB6C52C00D17C00B3AC66 /* HomeViewModel.swift in Sources */,
 				520AB6EA2C01F5E900B3AC66 /* SignInComposer.swift in Sources */,
@@ -367,6 +390,7 @@
 				520AB6D52C01F20D00B3AC66 /* ProfileView.swift in Sources */,
 				520AB6D32C01F1DD00B3AC66 /* ProfileComposer.swift in Sources */,
 				520AB6A02C00CA8B00B3AC66 /* SceneDelegate.swift in Sources */,
+				520AB7182C0641AF00B3AC66 /* SettingsView.swift in Sources */,
 				520AB6D72C01F24200B3AC66 /* ProfileViewModel.swift in Sources */,
 				520AB6F12C022AA900B3AC66 /* AppColor.swift in Sources */,
 				520AB6D92C01F2EB00B3AC66 /* TabBarItem.swift in Sources */,
