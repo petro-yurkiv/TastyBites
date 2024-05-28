@@ -5,7 +5,7 @@
 //  Created by Petro Yurkiv on 28.05.2024.
 //
 
-import UIKit
+import SwiftUI
 
 class CookingCoordinator: ChildCoordinator {
     var parentCoordinator: Coordinator
@@ -26,7 +26,16 @@ class CookingCoordinator: ChildCoordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToHome() {
-        
+    func goToHome(_ isSuccess: Bool) {
+        if let tabBarController = navigationController.tabBarController {
+            let vc = isSuccess == true ? UIHostingController(rootView: SuccessView()) : UIHostingController(rootView: FailureView())
+            vc.modalPresentationStyle = .fullScreen
+            tabBarController.present(vc, animated: true)
+            
+            navigationController.popToRootViewController(animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                vc.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

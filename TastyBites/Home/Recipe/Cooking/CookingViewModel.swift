@@ -14,4 +14,8 @@ class CookingViewModel: ObservableObject {
     deinit {
         coordinator?.didFinish()
     }
+    
+    func finish() {
+        coordinator?.goToHome(true)
+    }
 }

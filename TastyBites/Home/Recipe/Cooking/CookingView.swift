@@ -28,6 +28,7 @@ struct CookingView: View {
                 SpecialButton(title: selectedIndex == 4 ? "Finish" : "Next", isAccent: true) {
                     if selectedIndex == 4 {
                         print("Done")
+                        viewModel.finish()
                     }
                     
                     if selectedIndex < 4 {
