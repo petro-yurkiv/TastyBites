@@ -25,6 +25,6 @@ class HomeCoordinator: ChildCoordinator {
     func navigateToRecipe() {
         let coordinator = RecipeCoordinator(parentCoordinator: self, navigationController: navigationController)
         coordinator.start()
-//        childCoordinators.append(coordinator)
+        childCoordinators.append(coordinator)
     }
 }

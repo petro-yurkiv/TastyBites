@@ -26,7 +26,7 @@ struct SearchField: View {
                         .foregroundStyle(Color(AppColor.object.rawValue))
                 }
             }
-            .padding()
+            .padding(8.0)
             .background(Color(AppColor.light.rawValue))
             .cornerRadius(8.0)
             

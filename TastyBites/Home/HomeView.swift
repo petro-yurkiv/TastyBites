@@ -24,9 +24,6 @@ struct HomeView: View {
                 recipes(geometry)
             }
             .padding(.horizontal, 16.0)
-            .onAppear(perform: {
-                print(viewModel.coordinator?.childCoordinators)
-            })
         }
     }
     
@@ -45,15 +42,19 @@ struct HomeView: View {
             Text("Category")
                 .foregroundStyle(Color(AppColor.secondary.rawValue))
                 .font(.system(size: 24.0, weight: .medium))
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(Array(viewModel.categories.enumerated()), id: \.element) { index, category in
-                        categoryButton(category: category, index: index)
-                    }
+            categoriesStack(viewModel.categories)
+        }
+    }
+    
+    func categoriesStack(_ items: [String]) -> some View {
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(Array(items.enumerated()), id: \.element) { index, category in
+                    categoryButton(category: category, index: index)
                 }
             }
-            .scrollIndicators(.hidden)
         }
+        .scrollIndicators(.hidden)
     }
     
     func categoryButton(category: String, index: Int) -> some View {

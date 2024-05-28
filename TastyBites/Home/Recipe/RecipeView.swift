@@ -23,7 +23,7 @@ struct RecipeView: View {
                 Spacer()
                 
                 SpecialButton(title: "Start cooking") {
-                    
+                    viewModel.goToCooking()
                 }
                 .frame(width: geometry.size.width - 32.0)
                 .padding(.bottom, 16.0)

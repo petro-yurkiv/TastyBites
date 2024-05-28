@@ -45,6 +45,10 @@
 		520AB7002C049C7400B3AC66 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB6FF2C049C7400B3AC66 /* RecipeView.swift */; };
 		520AB7022C049C8200B3AC66 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7012C049C8200B3AC66 /* RecipeViewModel.swift */; };
 		520AB7042C04B98600B3AC66 /* SpecialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7032C04B98600B3AC66 /* SpecialButton.swift */; };
+		520AB7072C0614D300B3AC66 /* CookingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7062C0614D300B3AC66 /* CookingCoordinator.swift */; };
+		520AB7092C06151700B3AC66 /* CookingComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7082C06151700B3AC66 /* CookingComposer.swift */; };
+		520AB70B2C06152300B3AC66 /* CookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB70A2C06152300B3AC66 /* CookingView.swift */; };
+		520AB70D2C06152F00B3AC66 /* CookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB70C2C06152F00B3AC66 /* CookingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		520AB6FF2C049C7400B3AC66 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		520AB7012C049C8200B3AC66 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		520AB7032C04B98600B3AC66 /* SpecialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialButton.swift; sourceTree = "<group>"; };
+		520AB7062C0614D300B3AC66 /* CookingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingCoordinator.swift; sourceTree = "<group>"; };
+		520AB7082C06151700B3AC66 /* CookingComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingComposer.swift; sourceTree = "<group>"; };
+		520AB70A2C06152300B3AC66 /* CookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingView.swift; sourceTree = "<group>"; };
+		520AB70C2C06152F00B3AC66 /* CookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +247,20 @@
 				520AB6FD2C049C6700B3AC66 /* RecipeComposer.swift */,
 				520AB6FF2C049C7400B3AC66 /* RecipeView.swift */,
 				520AB7012C049C8200B3AC66 /* RecipeViewModel.swift */,
+				520AB7052C0614AF00B3AC66 /* Cooking */,
 			);
 			path = Recipe;
+			sourceTree = "<group>";
+		};
+		520AB7052C0614AF00B3AC66 /* Cooking */ = {
+			isa = PBXGroup;
+			children = (
+				520AB7062C0614D300B3AC66 /* CookingCoordinator.swift */,
+				520AB7082C06151700B3AC66 /* CookingComposer.swift */,
+				520AB70A2C06152300B3AC66 /* CookingView.swift */,
+				520AB70C2C06152F00B3AC66 /* CookingViewModel.swift */,
+			);
+			path = Cooking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +337,7 @@
 				520AB6B32C00CB7300B3AC66 /* AppCoordinator.swift in Sources */,
 				520AB6C82C01F05100B3AC66 /* AddRecipeView.swift in Sources */,
 				520AB7022C049C8200B3AC66 /* RecipeViewModel.swift in Sources */,
+				520AB7092C06151700B3AC66 /* CookingComposer.swift in Sources */,
 				520AB6DB2C01F50F00B3AC66 /* AppModel.swift in Sources */,
 				520AB6E82C01F59B00B3AC66 /* SignInCoordinator.swift in Sources */,
 				520AB6EE2C01F66200B3AC66 /* SignUpComposer.swift in Sources */,
@@ -328,8 +349,10 @@
 				520AB6EA2C01F5E900B3AC66 /* SignInComposer.swift in Sources */,
 				520AB7002C049C7400B3AC66 /* RecipeView.swift in Sources */,
 				520AB6CA2C01F06800B3AC66 /* AddRecipeCoordinator.swift in Sources */,
+				520AB7072C0614D300B3AC66 /* CookingCoordinator.swift in Sources */,
 				520AB7042C04B98600B3AC66 /* SpecialButton.swift in Sources */,
 				520AB69E2C00CA8B00B3AC66 /* AppDelegate.swift in Sources */,
+				520AB70B2C06152300B3AC66 /* CookingView.swift in Sources */,
 				520AB6FB2C049C5500B3AC66 /* RecipeCoordinator.swift in Sources */,
 				520AB6E62C01F57400B3AC66 /* SignUpViewModel.swift in Sources */,
 				520AB6FE2C049C6700B3AC66 /* RecipeComposer.swift in Sources */,
@@ -341,6 +364,7 @@
 				520AB6D72C01F24200B3AC66 /* ProfileViewModel.swift in Sources */,
 				520AB6F12C022AA900B3AC66 /* AppColor.swift in Sources */,
 				520AB6D92C01F2EB00B3AC66 /* TabBarItem.swift in Sources */,
+				520AB70D2C06152F00B3AC66 /* CookingViewModel.swift in Sources */,
 				520AB6E02C01F53C00B3AC66 /* SignInView.swift in Sources */,
 				520AB6E22C01F54700B3AC66 /* SignUpView.swift in Sources */,
 				520AB6BD2C00CE8400B3AC66 /* HomeCoordinator.swift in Sources */,

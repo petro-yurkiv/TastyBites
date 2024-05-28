@@ -47,6 +47,7 @@ struct RecipeCell: View {
             HStack {
                 indicator(icon: "clock", title: "30 min")
                 indicator(icon: "bolt", title: "500 kkal")
+                Spacer()
             }
         }
     }
