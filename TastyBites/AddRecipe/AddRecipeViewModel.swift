@@ -9,9 +9,5 @@ import Foundation
 
 class AddRecipeViewModel: ObservableObject {
     weak var coordinator: AddRecipeCoordinator?
-    @Published var text: String?
-    
-    func onTap() {
-        text = "AddRecipe"
-    }
+    var categories: [String] = ["All", "Breakfast", "Lunch", "Al", "Breakfas", "Lunc"]
 }

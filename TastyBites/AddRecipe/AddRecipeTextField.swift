@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct AddRecipeTextField: View {
+    @State var text: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("", text: $text, prompt: Text("Name of recipe").foregroundColor(Color(AppColor.secondary.rawValue)))
+                .font(.system(size: 32.0, weight: .regular))
+                .foregroundStyle(Color(AppColor.secondary.rawValue))
+            Divider()
+                .frame(height: 1.0)
+                .background(Color(AppColor.secondary.rawValue))
+        }
     }
 }
 

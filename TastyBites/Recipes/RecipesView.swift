@@ -19,13 +19,18 @@ struct RecipesView: View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 0.0) {
                 if viewModel.screenType == .home {
-                    title
+                    title("Hi, User")
                 }
                 
                 VStack(spacing: 16.0) {
                     SearchField()
-                    category
-                    recipes(geometry)
+                    category(viewModel.categories) {
+                        
+                    }
+                    
+                    recipes(geometry) {
+                        viewModel.goToRecipe()
+                    }
                 }
                 .padding(.top, 16.0)
             }
@@ -44,10 +49,12 @@ struct RecipesView: View {
             return "Liked"
         }
     }
-    
-    var title: some View {
+}
+
+extension RecipesView {
+    func title(_ text: String) -> some View {
         VStack(alignment: .leading) {
-            Text("Hi, User")
+            Text(text)
                 .font(.system(size: 32.0, weight: .medium))
             Text("What do you want to cook?")
                 .font(.system(size: 20.0, weight: .regular))
@@ -55,28 +62,35 @@ struct RecipesView: View {
         .foregroundStyle(Color(AppColor.secondary.rawValue))
     }
     
-    var category: some View {
+    func subtitle(_ text: String) -> some View {
+        Text(text)
+            .foregroundStyle(Color(AppColor.secondary.rawValue))
+            .font(.system(size: 24.0, weight: .medium))
+    }
+    
+    func category(_ categories: [String], action: @escaping () -> Void) -> some View {
         VStack(alignment: .leading) {
-            Text("Category")
-                .foregroundStyle(Color(AppColor.secondary.rawValue))
-                .font(.system(size: 24.0, weight: .medium))
-            categoriesStack(viewModel.categories)
+            subtitle("Category")
+            categoriesStack(categories, action: action)
         }
     }
     
-    func categoriesStack(_ items: [String]) -> some View {
+    func categoriesStack(_ items: [String], action: @escaping () -> Void) -> some View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(Array(items.enumerated()), id: \.element) { index, category in
-                    categoryButton(category: category, index: index)
+                    categoryButton(category: category, index: index) {
+                        action()
+                    }
                 }
             }
         }
         .scrollIndicators(.hidden)
     }
     
-    func categoryButton(category: String, index: Int) -> some View {
+    func categoryButton(category: String, index: Int, action: @escaping () -> Void) -> some View {
         Button(category) {
+            action()
             selectedIndex = index
         }
         .font(.system(size: 16.0))
@@ -87,18 +101,18 @@ struct RecipesView: View {
         .cornerRadius(8.0)
     }
     
-    func recipes(_ geometry: GeometryProxy) -> some View {
+    // TODO: like action
+    
+    func recipes(_ geometry: GeometryProxy, action: @escaping () -> Void) -> some View {
         VStack(alignment: .leading) {
-            Text("Recipes")
-                .foregroundStyle(Color(AppColor.secondary.rawValue))
-                .font(.system(size: 24.0, weight: .medium))
+            subtitle("Recipes")
             ScrollView(.vertical) {
                 LazyVGrid(columns: columns, content: {
                     ForEach(Array(viewModel.recipes.enumerated()), id: \.element) { element, index in
                         RecipeCell {
                             print("like")
                         } onTap: {
-                            viewModel.goToRecipe()
+                            action()
                         }
                         .frame(height: geometry.size.height / 3)
                     }

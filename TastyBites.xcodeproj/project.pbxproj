@@ -56,6 +56,7 @@
 		520AB7182C0641AF00B3AC66 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7172C0641AF00B3AC66 /* SettingsView.swift */; };
 		520AB71A2C0641BB00B3AC66 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */; };
 		520AB71C2C06494600B3AC66 /* RecipesScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB71B2C06494600B3AC66 /* RecipesScreenType.swift */; };
+		520AB7202C066E5200B3AC66 /* AddRecipeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB71F2C066E5200B3AC66 /* AddRecipeTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		520AB7172C0641AF00B3AC66 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		520AB71B2C06494600B3AC66 /* RecipesScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreenType.swift; sourceTree = "<group>"; };
+		520AB71F2C066E5200B3AC66 /* AddRecipeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				520AB6CB2C01F08600B3AC66 /* AddRecipeComposer.swift */,
 				520AB6C72C01F05100B3AC66 /* AddRecipeView.swift */,
 				520AB6CD2C01F09C00B3AC66 /* AddRecipeViewModel.swift */,
+				520AB71F2C066E5200B3AC66 /* AddRecipeTextField.swift */,
 			);
 			path = AddRecipe;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				520AB6EC2C01F64000B3AC66 /* SignUpCoordinator.swift in Sources */,
 				520AB6CE2C01F09C00B3AC66 /* AddRecipeViewModel.swift in Sources */,
 				520AB6D52C01F20D00B3AC66 /* ProfileView.swift in Sources */,
+				520AB7202C066E5200B3AC66 /* AddRecipeTextField.swift in Sources */,
 				520AB6D32C01F1DD00B3AC66 /* ProfileComposer.swift in Sources */,
 				520AB6A02C00CA8B00B3AC66 /* SceneDelegate.swift in Sources */,
 				520AB7182C0641AF00B3AC66 /* SettingsView.swift in Sources */,
