@@ -13,9 +13,9 @@ struct RecipeView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                recipeImage(geometry)
+                recipeImage(geometry, urlString: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg")
                     .padding(.top, 24.0)
-                content
+                content(time: 30, kkal: 500, ingredients: viewModel.ingredients)
                     .padding(.horizontal, 16.0)
                     .background(.white)
                     .cornerRadius(8.0)
@@ -31,9 +31,11 @@ struct RecipeView: View {
             .navigationTitle("Recipe")
         }
     }
-    
-    func recipeImage(_ geometry: GeometryProxy) -> some View {
-        AsyncImage(url: URL(string: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/10/free-images.jpg")) { result in
+}
+
+extension RecipeView {
+    func recipeImage(_ geometry: GeometryProxy, urlString: String) -> some View {
+        AsyncImage(url: URL(string: urlString)) { result in
             result.image?
                 .resizable()
                 .scaledToFill()
@@ -41,22 +43,22 @@ struct RecipeView: View {
         .frame(width: geometry.size.width, height: geometry.size.height / 3)
     }
     
-    var content: some View {
+    func content(time: Int, kkal: Int, ingredients: [String]) -> some View {
         VStack(alignment: .leading, spacing: 8.0) {
             Text("Dish with strowberry")
                 .font(.system(size: 32.0, weight: .medium))
                 .padding(.top, 16.0)
             
             HStack {
-                indicator(icon: "clock", title: "30 min")
-                indicator(icon: "bolt", title: "500 kkal")
+                indicator(icon: "clock", title: "\(time) min")
+                indicator(icon: "bolt", title: "\(kkal) kkal")
             }
             
             Text("Ingredients")
                 .font(.system(size: 24.0, weight: .medium))
                 .padding(.top, 8)
             
-            ingredients(viewModel.ingredients)
+            ingredientsView(ingredients)
                 .padding(.top, 8)
         }
         .foregroundStyle(Color(AppColor.secondary.rawValue))
@@ -70,7 +72,7 @@ struct RecipeView: View {
         .font(.system(size: 16.0, weight: .regular))
     }
     
-    func ingredients(_ items: [String]) -> some View {
+    func ingredientsView(_ items: [String]) -> some View {
         VStack(spacing: 16.0) {
             ForEach(items, id: \.self) { item in
                 ingredientCell(item)
