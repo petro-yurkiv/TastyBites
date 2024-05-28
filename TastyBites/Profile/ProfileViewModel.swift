@@ -9,10 +9,10 @@ import Foundation
 
 class ProfileViewModel: ObservableObject {
     weak var coordinator: ProfileCoordinator?
-    @Published var text: String?
     
-    func onTap() {
-        text = "Profile"
+    
+    
+    func signOut() {
         AppModel.token = ""
     }
 }
