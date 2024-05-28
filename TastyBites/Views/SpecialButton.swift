@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SpecialButton: View {
     var title: String
+    var isAccent: Bool
     var action: () -> Void
     
     var body: some View {
@@ -19,18 +20,18 @@ struct SpecialButton: View {
                 Spacer()
                 Text(title)
                     .font(.system(size: 16.0, weight: .bold))
-                    .foregroundStyle(Color(.white))
+                    .foregroundStyle(isAccent == true ? Color(.white) : Color(AppColor.accent.rawValue))
                     .padding(.vertical, 12.0)
                 Spacer()
             }
-            .background(Color(AppColor.accent.rawValue))
+            .background(isAccent == true ? Color(AppColor.accent.rawValue) : .white)
             .cornerRadius(8.0)
         }
     }
 }
 
 #Preview {
-    SpecialButton(title: "Hello") {
+    SpecialButton(title: "Hello", isAccent: true) {
         
     }
 }

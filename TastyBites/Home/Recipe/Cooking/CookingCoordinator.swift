@@ -25,4 +25,8 @@ class CookingCoordinator: ChildCoordinator {
         let vc = CookingComposer().build(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func goToHome() {
+        
+    }
 }

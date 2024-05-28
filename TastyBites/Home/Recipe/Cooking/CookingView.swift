@@ -22,6 +22,25 @@ struct CookingView: View {
                 Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
                     .font(.system(size: 20.0, weight: .regular))
                     .foregroundStyle(Color(AppColor.text.rawValue))
+                
+                Spacer()
+                
+                SpecialButton(title: selectedIndex == 4 ? "Finish" : "Next", isAccent: true) {
+                    if selectedIndex == 4 {
+                        print("Done")
+                    }
+                    
+                    if selectedIndex < 4 {
+                        selectedIndex += 1
+                    }
+                }
+                
+                SpecialButton(title: "Back", isAccent: false) {
+                    if selectedIndex > 0 {
+                        selectedIndex -= 1
+                    }
+                }
+                .padding(.bottom, 16.0)
             }
             .navigationTitle("Cooking")
             .padding(.horizontal, 16.0)
