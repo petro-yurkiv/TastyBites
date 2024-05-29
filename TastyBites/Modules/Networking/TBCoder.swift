@@ -14,25 +14,23 @@ enum TBCoder {
             let container = try decoder.singleValueContainer()
             let dateString = try container.decode(String.self)
             
-            if let date = OMFormatter.serverDateFormatter.date(from: dateString) {
+            if let date = TBFormatter.serverDateFormatter.date(from: dateString) {
                 return date
-            } else if let date = OMFormatter.iso8601DateFormatter.date(from: dateString) {
+            } else if let date = TBFormatter.iso8601DateFormatter.date(from: dateString) {
                 return date
             }
             
             throw DecodingError.dataCorruptedError(in: container, debugDescription: "Cannot decode date string \(dateString)")
         })
-//        decoder.dateDecodingStrategy = .formatted(OMFormatter.serverDateFormatter)
         return decoder
     }()
     
     static let defaultEncoder: JSONEncoder = {
         let encoder = JSONEncoder()
-//        encoder.dateEncodingStrategy = .formatted(OMFormatter.serverDateFormatter)
 
         encoder.dateEncodingStrategy = .custom({ date, encoder in
             var container = encoder.singleValueContainer()
-            let dateString = OMFormatter.iso8601DateFormatter.string(from: date)
+            let dateString = TBFormatter.iso8601DateFormatter.string(from: date)
             try container.encode(dateString)
         })
 
@@ -44,7 +42,7 @@ enum TBCoder {
 
         encoder.dateEncodingStrategy = .custom({ date, encoder in
             var container = encoder.singleValueContainer()
-            let dateString = OMFormatter.iso8601CurrentTimezoneDateFormatter.string(from: date)
+            let dateString = TBFormatter.iso8601CurrentTimezoneDateFormatter.string(from: date)
             try container.encode(dateString)
         })
 
