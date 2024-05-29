@@ -62,15 +62,9 @@ extension RecipesView {
         .foregroundStyle(Color(AppColor.secondary.rawValue))
     }
     
-    func subtitle(_ text: String) -> some View {
-        Text(text)
-            .foregroundStyle(Color(AppColor.secondary.rawValue))
-            .font(.system(size: 24.0, weight: .medium))
-    }
-    
     func category(_ categories: [String], action: @escaping () -> Void) -> some View {
         VStack(alignment: .leading) {
-            subtitle("Category")
+            Subtitle(text: "Category")
             categoriesStack(categories, action: action)
         }
     }
@@ -105,7 +99,7 @@ extension RecipesView {
     
     func recipes(_ geometry: GeometryProxy, action: @escaping () -> Void) -> some View {
         VStack(alignment: .leading) {
-            subtitle("Recipes")
+            Subtitle(text: "Recipes")
             ScrollView(.vertical) {
                 LazyVGrid(columns: columns, content: {
                     ForEach(Array(viewModel.recipes.enumerated()), id: \.element) { element, index in

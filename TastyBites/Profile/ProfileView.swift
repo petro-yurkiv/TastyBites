@@ -81,9 +81,7 @@ struct ProfileView: View {
     
     func aboutMe() -> some View {
         VStack(alignment: .leading, spacing: 8.0) {
-            Text("About me")
-                .font(.system(size: 24.0, weight: .medium))
-                .foregroundStyle(Color(AppColor.secondary.rawValue))
+            Subtitle(text: "About me")
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
                 .font(.system(size: 16.0, weight: .regular))
                 .foregroundStyle(.black)

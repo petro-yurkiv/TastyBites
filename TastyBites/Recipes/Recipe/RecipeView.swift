@@ -54,8 +54,7 @@ extension RecipeView {
                 indicator(icon: "bolt", title: "\(kkal) kkal")
             }
             
-            Text("Ingredients")
-                .font(.system(size: 24.0, weight: .medium))
+            Subtitle(text: "Ingredients")
                 .padding(.top, 8)
             
             ingredientsView(ingredients)

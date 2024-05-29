@@ -16,7 +16,7 @@ struct AddRecipeView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     AddRecipeTextField()
-                    subtitle("Photo")
+                    Subtitle(text: "Photo")
                     addPhoto(geometry) {
                         
                     }
@@ -29,12 +29,6 @@ struct AddRecipeView: View {
             }
             .scrollIndicators(.hidden)
         }
-    }
-    
-    func subtitle(_ text: String) -> some View {
-        Text(text)
-            .foregroundStyle(Color(AppColor.secondary.rawValue))
-            .font(.system(size: 24.0, weight: .medium))
     }
     
     func addPhoto(_ geometry: GeometryProxy, action: @escaping () -> Void) -> some View {
@@ -67,7 +61,7 @@ struct AddRecipeView: View {
     func category(text: String, categories: [String], action: @escaping () -> Void) -> some View {
         VStack {
             HStack {
-                subtitle(text)
+                Subtitle(text: text)
                 
                 Spacer()
                 
