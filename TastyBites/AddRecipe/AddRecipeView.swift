@@ -14,16 +14,30 @@ struct AddRecipeView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 16.0) {
                     AddRecipeTextField()
-                    Subtitle(text: "Photo")
-                    addPhoto(geometry) {
+                    
+                    VStack(alignment: .leading) {
+                        Subtitle(text: "Photo")
+                        addPhoto(geometry) {
+                            
+                        }
+                    }
+                    
+                    category(categories: viewModel.categories) {
                         
                     }
                     
-                    category(text: "Category", categories: viewModel.categories) {
+                    addIngredients(items: viewModel.ingredients) {
                         
                     }
+                    
+                    addStep(geometry, num: 1) {
+                        
+                    } addPhotoAction: {
+                        
+                    }
+                    .padding(.bottom, 16.0)
                 }
                 .padding(.horizontal, 16.0)
             }
@@ -58,10 +72,10 @@ struct AddRecipeView: View {
         .cornerRadius(8.0)
     }
     
-    func category(text: String, categories: [String], action: @escaping () -> Void) -> some View {
+    func category(categories: [String], action: @escaping () -> Void) -> some View {
         VStack {
             HStack {
-                Subtitle(text: text)
+                Subtitle(text: "Category")
                 
                 Spacer()
                 
@@ -93,6 +107,66 @@ struct AddRecipeView: View {
             .padding(.vertical, 8.0)
             .background(Color(AppColor.light.rawValue))
             .cornerRadius(8.0)
+    }
+    
+    func addIngredients(items: [String], action: @escaping () -> Void) -> some View {
+        VStack(alignment: .leading, spacing: 16.0) {
+            Subtitle(text: "Ingredients")
+            ingredientsView(items)
+            SpecialButton(title: "Add ingredient", isAccent: true) {
+                action()
+            }
+        }
+    }
+    
+    func ingredientsView(_ items: [String]) -> some View {
+        VStack(spacing: 16.0) {
+            ForEach(items, id: \.self) { item in
+                ingredientCell(item)
+            }
+        }
+    }
+    
+    func ingredientCell(_ item: String) -> some View {
+        HStack {
+            Text(item)
+            Spacer()
+            Text("100 g.")
+        }
+        .font(.system(size: 16.0, weight: .regular))
+        .foregroundStyle(Color(AppColor.text.rawValue))
+    }
+    
+    func addStep(_ geometry: GeometryProxy, num: Int, addStepAction: @escaping () -> Void, addPhotoAction: @escaping () -> Void) -> some View {
+        VStack {
+            HStack {
+                Subtitle(text: "Step \(num)")
+                Spacer()
+                addButton {
+                    addStepAction()
+                }
+            }
+            
+            addPhoto(geometry) {
+                addPhotoAction()
+            }
+            
+            addTextView("Advice")
+            addTextView("Description")
+        }
+    }
+    
+    func addTextView(_ text: String) -> some View {
+        VStack(alignment: .leading) {
+            Subtitle(text: text)
+            textView()
+        }
+    }
+    
+    func textView() -> some View {
+        TextEditor(text: $text)
+            .frame(height: 80.0)
+            .border(Color(AppColor.object.rawValue), width: 1.0)
     }
 }
 
