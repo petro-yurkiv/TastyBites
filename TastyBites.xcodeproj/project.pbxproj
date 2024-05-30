@@ -57,6 +57,8 @@
 		520AB71A2C0641BB00B3AC66 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */; };
 		520AB71C2C06494600B3AC66 /* RecipesScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB71B2C06494600B3AC66 /* RecipesScreenType.swift */; };
 		520AB7202C066E5200B3AC66 /* AddRecipeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520AB71F2C066E5200B3AC66 /* AddRecipeTextField.swift */; };
+		9D0E2F122C08A41E00175D38 /* SignTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E2F112C08A41E00175D38 /* SignTextField.swift */; };
+		9D0E2F182C09383500175D38 /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0E2F172C09383500175D38 /* AppImage.swift */; };
 		9D32435F2C07D0220016240F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D32435E2C07D0220016240F /* GoogleService-Info.plist */; };
 		9D3243622C07D1530016240F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9D3243612C07D1530016240F /* FirebaseAnalytics */; };
 		9D3243642C07D1530016240F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9D3243632C07D1530016240F /* FirebaseAuth */; };
@@ -133,6 +135,8 @@
 		520AB7192C0641BB00B3AC66 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		520AB71B2C06494600B3AC66 /* RecipesScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreenType.swift; sourceTree = "<group>"; };
 		520AB71F2C066E5200B3AC66 /* AddRecipeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeTextField.swift; sourceTree = "<group>"; };
+		9D0E2F112C08A41E00175D38 /* SignTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTextField.swift; sourceTree = "<group>"; };
+		9D0E2F172C09383500175D38 /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
 		9D32435E2C07D0220016240F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D3EF7012C072DD900107263 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9D3EF7032C0730B500107263 /* EnvManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvManager.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				520AB6D82C01F2EB00B3AC66 /* TabBarItem.swift */,
 				520AB6DA2C01F50F00B3AC66 /* AppModel.swift */,
 				520AB6F02C022AA900B3AC66 /* AppColor.swift */,
+				9D0E2F172C09383500175D38 /* AppImage.swift */,
 				9D32435E2C07D0220016240F /* GoogleService-Info.plist */,
 			);
 			path = TastyBites;
@@ -340,6 +345,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		9D0E2F102C08A3FE00175D38 /* ReusableElements */ = {
+			isa = PBXGroup;
+			children = (
+				9D0E2F112C08A41E00175D38 /* SignTextField.swift */,
+			);
+			path = ReusableElements;
+			sourceTree = "<group>";
+		};
 		9D3EF6F82C072CC700107263 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3EF70D2C07ABC100107263 /* TBFormatter.swift */,
+				9D0E2F102C08A3FE00175D38 /* ReusableElements */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -496,6 +510,7 @@
 				520AB6C52C00D17C00B3AC66 /* RecipesViewModel.swift in Sources */,
 				520AB6EA2C01F5E900B3AC66 /* SignInComposer.swift in Sources */,
 				520AB7002C049C7400B3AC66 /* RecipeView.swift in Sources */,
+				9D0E2F182C09383500175D38 /* AppImage.swift in Sources */,
 				520AB6CA2C01F06800B3AC66 /* AddRecipeCoordinator.swift in Sources */,
 				520AB7072C0614D300B3AC66 /* CookingCoordinator.swift in Sources */,
 				520AB7042C04B98600B3AC66 /* SpecialButton.swift in Sources */,
@@ -511,6 +526,7 @@
 				520AB7202C066E5200B3AC66 /* AddRecipeTextField.swift in Sources */,
 				520AB6D32C01F1DD00B3AC66 /* ProfileComposer.swift in Sources */,
 				520AB6A02C00CA8B00B3AC66 /* SceneDelegate.swift in Sources */,
+				9D0E2F122C08A41E00175D38 /* SignTextField.swift in Sources */,
 				520AB7182C0641AF00B3AC66 /* SettingsView.swift in Sources */,
 				520AB6D72C01F24200B3AC66 /* ProfileViewModel.swift in Sources */,
 				520AB6F12C022AA900B3AC66 /* AppColor.swift in Sources */,
